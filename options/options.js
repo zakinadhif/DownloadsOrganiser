@@ -43,20 +43,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addMappingForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        const newExt = document.getElementById('newExtension').value.trim();
+        let newExt = document.getElementById('newExtension').value.trim(); // This is now the Domain
         const newFolder = document.getElementById('newFolder').value.trim();
+
+        // Normalize domain: remove www.
+        if (newExt.startsWith('www.')) {
+            newExt = newExt.substring(4);
+        }
+
         if (newExt && newFolder) {
             chrome.storage.sync.get('folderMap', function(data) {
                 data.folderMap = data.folderMap || {};
+                
+                // Allow overwriting or warn? The previous code didn't check for existence on add, 
+                // but the code I read earlier had: if (data.folderMap.hasOwnProperty(newExt)) ...
+                // Wait, that was popup.js I think. options.js didn't have that check in the snippet I read?
+                // Let's check the read content of options.js again.
+                
                 data.folderMap[newExt] = newFolder;
                 chrome.storage.sync.set({ 'folderMap': data.folderMap }, function() {
                     loadMappings();
                     addMappingForm.reset();
-                    clearErrorMessage(); // Clear any previous error messages
+                    clearErrorMessage(); 
                 });
             });
         } else {
-            displayErrorMessage('Both fields are required.');
+            displayErrorMessage('Both Domain and Folder Name are required.');
         }
     });
 

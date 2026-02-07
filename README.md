@@ -1,6 +1,6 @@
 # DownloadsOrganiser
 
-Automatically organizes downloaded files into designated folders based on file type.
+Automatically organizes downloaded files into folders based on the source website (CTF site).
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Automatically organizes downloaded files into designated folders based on file t
 
 ## Description
 
-DownloadsOrganiser is a browser extension that simplifies the process of organizing downloaded files on your computer. It automatically categorizes downloaded files into specific folders based on their file extensions. Say goodbye to cluttered download folders!
+DownloadsOrganiser is a browser extension that simplifies the process of organizing downloaded files on your computer. It automatically categorizes downloaded files into folders based on the source website. Say goodbye to cluttered download folders!
 
 ## Features
 

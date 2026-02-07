@@ -9,23 +9,16 @@
 <body>
     <div class="container">
         <h1 class="title">DownloadOrganiser</h1>
-        <form id="addMappingForm">
-            <div class="form-group">
-                <label for="newExtension">File Extension (e.g., pdf):</label>
-                <input type="text" id="newExtension" placeholder="Enter file extension">
-            </div>
-            <div class="form-group">
-                <label for="newFolder">Folder Name (e.g., PDFs/):</label>
-                <input type="text" id="newFolder" placeholder="Enter folder name">
-            </div>
-            <button type="submit">Add Folder</button>
-        </form>
+        <div style="text-align: center; padding: 20px;">
+            <p>Downloads capture active for configured domains.</p>
+            <a href="./../options/options.html" target="_blank" class="link-to-options" style="display:block; margin-top:10px;">Configure Domains</a>
+        </div>
 
    
         <div id="successMessage" class="success-message"></div>
         
         <div id="errorMessage" class="error-message"></div>
-        <a href="./../options/options.html" target="_blank" class="link-to-options">Go to Settings Page</a>
+        
         <div id="messageBox"></div>
     </div>
     <script src="popup.js"></script>

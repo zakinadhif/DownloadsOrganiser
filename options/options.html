@@ -13,16 +13,16 @@
         <div class="content"  id="howToContent">
             <p>Follow these steps to customize your download organization:</p>
             <ol>
-                <li><strong>Add a Folder:</strong> Click 'Add New Folder' and enter the file extension (e.g., 'pdf') and the desired folder name (e.g., 'PDFs/').</li>
-                <li><strong>Remove a Folder:</strong> Click 'Remove' next to the Folder you wish to delete.</li>
-                <li><strong>Save Your Settings:</strong> Click 'Save Changes' to apply your settings.</li>
+                <li><strong>Add a Domain:</strong> Enter the website domain (e.g., 'ctf.example.com') and the desired folder name (e.g., 'MyCTF').</li>
+                <li><strong>Remove a Domain:</strong> Click 'Remove' next to the Domain you wish to stop organizing.</li>
+                <li><strong>Save:</strong> Changes are saved automatically.</li>
             </ol>
-            <p>Your settings will automatically organize downloaded files into the specified folders.</p>
+            <p>Your settings will automatically organize downloaded files from these domains into the specified folders.</p>
         </div>
         <table id="mappingsTable">
             <thead>
                 <tr>
-                    <th>File Extension</th>
+                    <th>Domain</th>
                     <th>Folder Name</th>
                     <th>Action</th> 
                 </tr>
@@ -32,11 +32,11 @@
             </tbody>
         </table>
         <form id="addMappingForm">
-            <label for="newExtension">File Extension (e.g., pdf):</label>
-            <input type="text" id="newExtension" placeholder="File extension (e.g., pdf)">
-            <label for="newFolder">Folder Name (e.g., PDFs/):</label>
-            <input type="text" id="newFolder" placeholder="Folder (e.g., PDFs/)">
-            <button type="submit">Add Folder</button>
+            <label for="newExtension">Domain (e.g., ctf.example.com):</label>
+            <input type="text" id="newExtension" placeholder="Domain (e.g., ctf.example.com)">
+            <label for="newFolder">Folder Name (e.g., MyCTF/):</label>
+            <input type="text" id="newFolder" placeholder="Folder Name (e.g., MyCTF/)">
+            <button type="submit">Add Domain</button>
         </form>
         <div id="errorMessage"></div>
     </div>
