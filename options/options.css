@@ -126,5 +126,6 @@ button:hover {
     border-radius: 5px; 
     margin-top: 10px; 
     font-weight: bold; 
+    display: none;
 }
 
